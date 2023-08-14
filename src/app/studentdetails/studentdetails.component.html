@@ -1,0 +1,21 @@
+<div>
+    <table>
+        <thead>
+          <tr>
+            <th>Field 1</th>
+            <th>Field 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of formData; let i = index">
+            <td><input [(ngModel)]="item.field1" name="field1-{{ i }}" /></td>
+            <td><input [(ngModel)]="item.field2" name="field2-{{ i }}" /></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <button (click)="addRow()">Add More</button>
+      <button (click)="submitForm()">Submit</button>
+      
+  </div>
+  
